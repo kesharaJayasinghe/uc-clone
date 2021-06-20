@@ -3,5 +3,126 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "uc-clone": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/uc-clone",
+      "sourceRoot": "projects/uc-clone/src",
+      "prefix": "keshJay",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/uc-clone",
+            "index": "projects/uc-clone/src/index.html",
+            "main": "projects/uc-clone/src/main.ts",
+            "polyfills": "projects/uc-clone/src/polyfills.ts",
+            "tsConfig": "projects/uc-clone/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/uc-clone/src/favicon.ico",
+              "projects/uc-clone/src/assets"
+            ],
+            "styles": [
+              "projects/uc-clone/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/uc-clone/src/environments/environment.ts",
+                  "with": "projects/uc-clone/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "uc-clone:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "uc-clone:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "uc-clone:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/uc-clone/src/test.ts",
+            "polyfills": "projects/uc-clone/src/polyfills.ts",
+            "tsConfig": "projects/uc-clone/tsconfig.spec.json",
+            "karmaConfig": "projects/uc-clone/karma.conf.js",
+            "assets": [
+              "projects/uc-clone/src/favicon.ico",
+              "projects/uc-clone/src/assets"
+            ],
+            "styles": [
+              "projects/uc-clone/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/uc-clone/tsconfig.app.json",
+              "projects/uc-clone/tsconfig.spec.json",
+              "projects/uc-clone/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/uc-clone/e2e/protractor.conf.js",
+            "devServerTarget": "uc-clone:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "uc-clone:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "uc-clone"
 }
