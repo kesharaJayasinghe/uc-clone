@@ -1,0 +1,29 @@
+a {
+    font-size: small;
+}
+
+#social-icon {
+    font-size: medium;
+}
+#social-icon:hover {
+    color: #17aebd;
+    transition: all 0.6s;
+    transform: scale(2);
+}
+
+footer {
+    background-color: #000000;
+    color: #ffff;
+}
+
+.white-txt {
+    color: #fff;
+}
+
+@media only screen and (max-width: 252px) {
+    .social-icon-div {
+        i {
+            margin-top: 0.5rem;
+        }
+    }
+}

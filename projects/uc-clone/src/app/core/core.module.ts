@@ -8,24 +8,27 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 // Material
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
-    MainLayoutComponent
+    MainLayoutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
-    // vendor
     // CommonModule
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
 
-    // material
+    // Material
     MatButtonModule,
     MatToolbarModule,
   ],
-  exports: [MainLayoutComponent]
+  exports: [MainLayoutComponent, HeaderComponent, FooterComponent]
 })
 export class CoreModule { }

@@ -1,0 +1,32 @@
+.header-image {
+    z-index: -5;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 552px;
+    background-image: linear-gradient(to right, #00000038, #000000a6),
+        url(https://res.cloudinary.com/urbanclap/image/upload/categories/category_v2/category_d07d3980.png);
+}
+
+/* Medium devices (display size, upto 991px) */
+@media only screen and (max-width: 991px) {
+    .brand-logo {
+        display: none;
+    }
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.4);
+        margin-top: 0.5rem;
+        padding-left: 0.5rem;
+        border-bottom-right-radius: 0.5rem !important;
+        border-bottom-left-radius: 0.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .navbar {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

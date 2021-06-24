@@ -1,0 +1,67 @@
+.head-txt {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.page-path {
+    text-align: center;
+    color: white;
+    font-size: small;
+    font-weight: 500;
+    margin-top: 6rem;
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan i {
+    padding-left: 10px;
+}
+
+.form-input {
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 0.25rem;
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.loc-btn {
+    background-color: white;
+    color: black;
+    border-radius: 0.25rem !important;
+}
+
+/* Medium devices (display size, upto 768px) */
+@media only screen and (max-width: 767px) {
+    .page-path {
+        margin-top: 3rem;
+    }
+    .head-txt {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 422px) {
+    .page-path {
+        margin-top: 2rem;
+    }
+    .head-txt {
+        text-align: center;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
+}
