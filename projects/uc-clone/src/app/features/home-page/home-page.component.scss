@@ -56,6 +56,81 @@
     color: #bfbfbf;
 }
 
+.img-div {
+    img {
+        width: 440px;
+        height: 380px;
+        object-fit: cover;
+        object-position: 100% -60%;
+    }
+    h1 {
+        // text-overflow: ellipsis;
+        word-wrap: break-word;
+        display: flex;
+    }
+}
+
+//////////////////
+// body {
+//     background-color: #eee;
+//     font-family: "Poppins", sans-serif;
+//     font-weight: 300
+// }
+
+// .height {
+//     // height: 100vh
+// }
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+
+.search input {
+    height: 50px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid #1c1c1c;
+}
+
+.search .fa-mobile {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    // width: 110px;
+    background: #292929;
+}
+
+.txt-input {
+    width: 85%;
+}
+
+.refer-sec {
+    h1 {
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: medium;
+        color: #5a5a5a;
+    }
+}
+
+.store-logo{
+    width: 144px;
+}
+
 @media only screen and (max-width: 1200px) {
     .banner-section {
         display: none;
@@ -63,6 +138,18 @@
     .section-txt {
         font-size: large;
         margin-bottom: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .img-div {
+        display: none !important;
+    }
+    .refer-sec {
+        margin-bottom: 2rem;
+        .txt-input {
+            width: 70%;
+        }
     }
 }
 
@@ -90,5 +177,11 @@
         font-size: 1.6rem;
         font-weight: 500;
         margin-top: 1.5rem;
+    }
+    .refer-sec {
+        .txt-input {
+            width: 100%;
+            margin-right: 0 !important;
+        }
     }
 }
