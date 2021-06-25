@@ -6,12 +6,16 @@ import { HomePageComponent } from './home-page.component';
 import { SharedModule } from '../../shared/shared.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselListComponent } from './components/carousel-list/carousel-list.component';
+import { ServicesListComponent } from './components/services-list/services-list.component';
+import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-carousel.component';
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
-    CarouselListComponent
+    CarouselListComponent,
+    ServicesListComponent,
+    ReviewsCarouselComponent
   ],
   imports: [
     CommonModule,
