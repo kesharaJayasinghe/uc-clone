@@ -40,18 +40,24 @@
 }
 
 .why-book-section {
-    .section-txt {
-        text-align: center;
-        color: #000;
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
+    margin-bottom: 2rem;
+}
+
+.section-txt {
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 1200px) {
     .why-book-section {
         display: none;
+    }
+    .section-txt {
+        font-size: large;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -81,17 +87,3 @@
         margin-top: 1.5rem;
     }
 }
-
-
-
-
-.custom-slider-main{
-    display: flex;
-    overflow: hidden;    
-    scroll-behavior: smooth;
-}
-
- .info-box{
-    width: 50px;
-    height:50px
- }
