@@ -8,6 +8,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselListComponent } from './components/carousel-list/carousel-list.component';
 import { ServicesListComponent } from './components/services-list/services-list.component';
 import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-carousel.component';
+import { ReferSectionComponent } from './components/refer-section/refer-section.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-
     HomePageComponent,
     CarouselListComponent,
     ServicesListComponent,
-    ReviewsCarouselComponent
+    ReviewsCarouselComponent,
+    ReferSectionComponent
   ],
   imports: [
     CommonModule,

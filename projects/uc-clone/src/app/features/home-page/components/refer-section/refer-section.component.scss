@@ -1,0 +1,99 @@
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+
+.search input {
+    height: 50px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid #1c1c1c;
+}
+
+.search .fa-mobile {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    background: #292929;
+}
+
+.txt-input {
+    width: 85%;
+}
+
+.refer-sec {
+    h1 {
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: medium;
+        color: #5a5a5a;
+    }
+}
+
+.play-store-logo {
+    padding-left: 0;
+    img {
+        width: 160px;
+        padding-left: 3px;
+        padding-right: 0;
+    }
+}
+
+.app-store-logo {
+    padding-left: 0;
+    img {
+        width: 130px;
+        height: 40px;
+        padding-right: 0;
+        margin-top: 10px !important;
+    }
+}
+
+.img-div {
+    img {
+        width: 440px;
+        height: 380px;
+        object-fit: cover;
+        object-position: 100% -60%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .img-div {
+        display: none !important;
+    }
+    .refer-sec {
+        margin-bottom: 2rem;
+        .txt-input {
+            width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 422px) {
+    .refer-sec {
+        .txt-input {
+            width: 100%;
+            margin-right: 0 !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 314px) {
+    .app-store-logo {
+        padding-left: 12px;
+    }
+}

@@ -1,5 +1,13 @@
 <h1 class="section-txt">Services for your home</h1>
 <h4 class="section-subtxt rubik-font">By vetted professionals</h4>
-<div class="container">
-   
+<div class="carousel-container container">
+    <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" class="pt-1">
+        <ng-container *ngFor="let item of carouselItemList">
+            <ng-template carouselSlide>
+                <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="carousel-img mt-3 shadow" />
+                <h4>{{ item.title }}</h4>
+                <h5>{{ item.subtitle }}</h5>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
 </div>
