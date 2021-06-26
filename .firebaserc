@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "uc-clone-2": {
+      "hosting": {
+        "uc-clone": [
+          "uc-clone-2"
+        ]
+      }
+    }
+  }
+}

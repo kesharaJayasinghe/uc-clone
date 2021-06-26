@@ -1,0 +1,50 @@
+.category-list {
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 160px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    height: auto;
+    width: 62%;
+}
+
+.card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: all 1.2s;
+}
+
+.card-inner:hover {
+    transform: scale(1.1);
+}
+
+.mg-text span {
+    font-size: 11px;
+}
+
+.mg-text {
+    line-height: 14px;
+}
+
+/* Medium devices (display size, upto 768px) */
+@media only screen and (max-width: 768px) {
+    .category-list {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 422px) {
+    .category-list {
+        margin-top: 5rem;
+    }
+}

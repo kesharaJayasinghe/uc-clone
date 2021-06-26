@@ -1,0 +1,127 @@
+a {
+    font-size: small;
+}
+
+#social-icon {
+    font-size: medium;
+}
+#social-icon:hover {
+    color: #17aebd;
+    transition: all 0.6s;
+    transform: scale(2);
+}
+
+footer {
+    background-color: #000000;
+    color: #ffff;
+}
+
+.white-txt {
+    color: #fff;
+}
+
+.uc-logo {
+    margin-left: 1rem;
+    width: 180px;
+}
+
+.store-logo {
+    width: 300px;
+    padding-left: 3px;
+    padding-right: 0;
+}
+
+.play-store-logo {
+    padding-left: 0;
+    img {
+        width: 160px;
+        padding-left: 3px;
+        padding-right: 0;
+    }
+}
+
+.app-store-logo {
+    padding-left: 0;
+    img {
+        width: 130px;
+        height: 40px;
+        // padding-left: 3px;
+        padding-right: 0;
+        margin-top: 10px !important;
+    }
+}
+
+// .social-icon-div {
+//     align-items: center;
+// }
+
+@media only screen and (max-width: 373px) {
+    .social-icon-div {
+        i {
+            margin-top: 0.5rem;
+
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer-text {
+        h5 {
+            margin-bottom: 12px !important;
+        }
+        p {
+            margin-bottom: 2px !important;
+        }
+    }
+    .social-icon-div {
+        a {
+            margin-right: 1rem !important;
+        }
+    }
+    .store-logo {
+        display: none;
+    }
+    .str-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .store-logo {
+        width: 170px;
+    }
+    .play-store-logo {
+        img {
+            width: 105px;
+            padding-left: 3px;
+            padding-right: 0;
+        }
+    }
+    
+    .app-store-logo {
+        img {
+            width: 90px;
+            height: 25px;
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: 6px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .str-logo {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 658px) {
+    .uc-logo {
+        margin-left: 0rem;
+        width: 170px;
+    }
+    .str-logo{
+        display: none !important;
+    }
+}

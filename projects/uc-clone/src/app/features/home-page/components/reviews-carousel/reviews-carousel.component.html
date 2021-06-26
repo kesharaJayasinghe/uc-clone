@@ -1,0 +1,11 @@
+<h1 class="section-txt">Customer reviews</h1>
+<h4 class="section-subtxt rubik-font">What customers are saying about our services</h4>
+<div class="carousel-container container">
+    <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" class="pt-1">
+        <ng-container *ngFor="let item of carouselItemList">
+            <ng-template carouselSlide>
+                <img [src]="item" class="carousel-img shadow" />
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>

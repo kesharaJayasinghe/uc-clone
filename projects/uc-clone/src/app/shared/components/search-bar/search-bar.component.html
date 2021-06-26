@@ -1,0 +1,22 @@
+<div class="row search-bar">
+    <div class="btn-group col-md-4 height p-0">
+        <button class="btn btn-secondary wrap-text ms-0 loc-btn" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-map-marker pull-left pe-1"></i> <i class="fa fa-chevron-down pull-right"></i>Swanston St,
+            Melbourne
+        </button>
+        <ul class="dropdown-menu">
+            <li *ngFor="let item of locationList"><a class="dropdown-item" href="#">{{item.location}}</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Adelaide</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8 height p-0">
+        <div class="form"> <i class="fa fa-search"></i> <input type="text" class="form-control form-input"
+                placeholder="Search for a service"> <span class="left-pan end-mic"><i
+                    class="fa fa-microphone"></i></span> </div>
+        <p class="wrap-text sug-txt">Home cleaning, Gardening etc.</p>
+    </div>
+</div>
