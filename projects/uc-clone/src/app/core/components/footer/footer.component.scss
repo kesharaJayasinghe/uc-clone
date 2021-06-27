@@ -15,6 +15,16 @@ footer {
     background-color: #000000;
     color: #ffff;
 }
+.footer-ico {
+    background-color: #0e0e0e;
+    color: #ffffff;
+    font-size: small;
+    .c-right {
+        background-color: #0e0e0e;
+        color: #9b9b9b;
+        font-size: small;
+    }
+}
 
 .white-txt {
     color: #fff;
@@ -59,9 +69,7 @@ footer {
     .social-icon-div {
         i {
             margin-top: 0.5rem;
-
         }
-        
     }
 }
 
@@ -98,7 +106,7 @@ footer {
             padding-right: 0;
         }
     }
-    
+
     .app-store-logo {
         img {
             width: 90px;
@@ -121,7 +129,7 @@ footer {
         margin-left: 0rem;
         width: 170px;
     }
-    .str-logo{
+    .str-logo {
         display: none !important;
     }
 }
