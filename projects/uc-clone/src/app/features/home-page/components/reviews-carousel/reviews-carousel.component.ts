@@ -57,7 +57,7 @@ export class ReviewsCarouselComponent implements OnInit {
 
   getPassedData(data: SlidesOutputData) {
     this.activeCategory = data;
-    console.log(this.activeCategory);
+    // console.log(this.activeCategory);
   }
 
 }

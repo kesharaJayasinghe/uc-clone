@@ -1,7 +1,11 @@
 <keshJay-header></keshJay-header>
 
 <main>
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="displayState === 1"></router-outlet>
+    <keshJay-sign-in *ngIf="displayState === 2"></keshJay-sign-in>
+    <keshJay-sign-up *ngIf="displayState === 3"></keshJay-sign-up>
+    <keshJay-verify-email *ngIf="displayState === 4"></keshJay-verify-email>
+    <keshJay-forgot-password *ngIf="displayState === 5"></keshJay-forgot-password>
 </main>
 
 <keshJay-footer></keshJay-footer>
