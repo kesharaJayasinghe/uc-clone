@@ -8,6 +8,7 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 // Material
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -37,6 +38,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     // Material
     MatButtonModule,
     MatToolbarModule,
+    MatDialogModule
   ],
   exports: [MainLayoutComponent, HeaderComponent, FooterComponent]
 })
