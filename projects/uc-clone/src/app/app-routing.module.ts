@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'image-upload',
-    loadChildren: () => import('./features/image-upload/image-upload.module').then(m => m.ImageUploadModule)
+    loadChildren: () => import('./features/image-upload/image-upload.module').then(m => m.ImageUploadModule),
+    canActivate: [AuthGuard]
   },
 
 ];

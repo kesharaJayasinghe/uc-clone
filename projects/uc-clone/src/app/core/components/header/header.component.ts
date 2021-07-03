@@ -1,10 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { DataService } from '../../services/data.service';
-// import { MatDialog } from '@angular/material/dialog';
-
 
 @Component({
   selector: 'keshJay-header',
@@ -18,7 +15,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   subscription: Subscription | undefined;
   loginStatus: boolean | undefined;
 
-  constructor(private data: DataService, public authService: AuthService, private dialog: MatDialogModule) { }
+  constructor(
+    private data: DataService,
+    public authService: AuthService,
+  ) { }
 
   ngOnInit(): void {
     this.subscription = this.data.currentDisplayState.subscribe(displayState => this.displayState = displayState);
@@ -40,10 +40,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     } else if (!this.loginStatus) {
       this.data.changeDisplayState(2);
     }
-  }
-
-  openImageUploadDialog(){
-    
   }
 
 }

@@ -29,6 +29,7 @@ export class AuthService {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user') || '{}');
+        this.getUserRole();
       } else {
         localStorage.setItem('user', '');
         JSON.parse(localStorage.getItem('user') || '{}');
@@ -141,6 +142,23 @@ export class AuthService {
       .catch((error) => {
         console.log(error);
       })
+  }
+
+  async getUserRole() {
+    var userRole;
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    if (user.uid != null) {
+      await this.userCollection.doc(user.uid).get().toPromise().then((e) => {
+        userRole = e.get('userRole');
+        localStorage.setItem('userRole', userRole);
+      });
+    }
+    return userRole;
+  }
+
+  userRoleVal() {
+    const userRole = localStorage.getItem('userRole');
+    return userRole;
   }
 
 }
