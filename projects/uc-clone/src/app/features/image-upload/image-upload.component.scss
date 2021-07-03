@@ -1,0 +1,85 @@
+.head-txt {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.page-path {
+    text-align: center;
+    color: white;
+    font-size: small;
+    font-weight: 500;
+    margin-top: 6rem;
+}
+
+.upload-form{
+    margin-bottom: 6rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    height: auto;
+    width: 62%;
+    padding-top: 15px;
+
+    .form-input {
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .form-control {
+        height: 50px;
+        background-color: #dfdfdf;
+        text-indent: 6px;
+        font-size: 15px;
+        color: #000000;
+    }
+    
+    .form-control:focus {
+        background-color: #bfbfbf;
+        box-shadow: none;
+        color: #000000;
+        border-color: teal;
+    }
+    button {
+        background-color: teal;
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .upload-form {
+        width: 90%;
+    }
+}
+
+/* Medium devices (display size, upto 768px) */
+@media only screen and (max-width: 767px) {
+    .page-path {
+        margin-top: 3rem;
+    }
+    .head-txt {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 422px) {
+    .page-path {
+        margin-top: 2rem;
+    }
+    .head-txt {
+        text-align: center;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
+}

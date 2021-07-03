@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./features/home-page/home-page.module').then(m => m.HomePageModule)
   },
+  {
+    path: 'image-upload',
+    loadChildren: () => import('./features/image-upload/image-upload.module').then(m => m.ImageUploadModule)
+  },
 
 ];
 

@@ -3,4 +3,5 @@ export interface CarouselListDocModel {
     title: string;
     subtitle: string;
     imageUrl: string;
+    createdAt: firebase.default.firestore.Timestamp;
 }

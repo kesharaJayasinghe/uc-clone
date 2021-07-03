@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row align-items-center">
+        <p class="page-path">Admin / Image Upload</p>
+        <h1 class="head-txt">Carousel Image Upload.</h1>
+    </div>
+</div>
+
+<div class="container upload-form shadow">
+    <h3>Please enter the following details to continue</h3>
+
+    <div class="form-input">
+        <input type="text" class="form-control" placeholder="Title" #title required>
+    </div>
+    <div class="form-input">
+        <input type="text" class="form-control" placeholder="Subtitle" #subtitle required>
+    </div>
+    <div class="form-input pt-2">
+        <input type="file" accept=".jpeg, .jpg, .png, .svg" (change)="onFileSelected($event)" name="image" autocomplete="off"/>
+        <div *ngIf="progressValue | async as val">
+            <span *ngIf="val < 100" style="color: red; font-size: small;">Uploading Image: {{ val | number}}% </span>
+            <span *ngIf="val == 100 && downloadableURL == ''" style="color: red; font-size: small;">Please Wait!</span>
+            <span *ngIf="val == 100 && downloadableURL" style="color: green; font-size: small;">Image Added!</span><br>
+            <img [src]="downloadableURL" onerror="this.onerror=null; this.src='assets/images/no-image.jpg';" width="240px" style="border-radius: 0.5rem;" />
+        </div>
+    </div>
+    <button class="btn btn-primary mt-4 mb-4 signup" (click)="uploadImage(title.value, subtitle.value)">Upload Image</button>
+</div>
