@@ -16,6 +16,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     // Material
     MatButtonModule,
     MatToolbarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   exports: [MainLayoutComponent, HeaderComponent, FooterComponent]
 })

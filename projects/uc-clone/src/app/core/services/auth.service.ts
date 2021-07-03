@@ -1,11 +1,12 @@
 import { Injectable, NgZone } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { User } from '../../models/user.model';
 import firebase from 'firebase';
 import { Subscription } from 'rxjs';
 import { DataService } from './data.service';
+import * as firebase1 from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class AuthService {
   userData: any;
   displayState: number = 0;
   subscription: Subscription | undefined;
+  userCollection: AngularFirestoreCollection<any> = this.afs.collection('users');
 
   constructor(
     public afs: AngularFirestore,
@@ -59,12 +61,13 @@ export class AuthService {
     }
   }
 
-  async SignUp(email: string, password: string) {
+  async SignUp(email: string, password: string, fullName: string) {
     try {
       const result = await this.afAuth.createUserWithEmailAndPassword(email, password);
       this.SendVerificationMail();
       if (result.user)
-        this.SetUserData(result.user);
+       await this.SetUserData(result.user);
+        this.addUserInfo(result.user != null ? result.user.uid : '', fullName);
     } catch (error) {
       window.alert(error.message);
     }
@@ -127,6 +130,17 @@ export class AuthService {
 
   GoogleAuth() {
     return this.AuthLogin(new firebase.auth.GoogleAuthProvider());
+  }
+
+  addUserInfo(uid: string, fullName: string) {
+    this.userCollection.doc(uid).set({
+      fullName: fullName,
+      createdAt: firebase1.default.firestore.Timestamp.now(),
+      userRole: 0
+    })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
 }

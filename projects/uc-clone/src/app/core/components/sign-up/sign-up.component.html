@@ -23,7 +23,7 @@
                     <input type="password" class="form-control" placeholder="Password" #userPwd required> 
                 </div>
                 <button class="btn btn-primary mt-4 signup"
-                    (click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
+                    (click)="signUpUser(userEmail.value, userPwd.value, fullName.value)">Sign Up</button>
                 <div class="text-center mt-4 mb-1"> <span>Or continue with the below social accounts</span> </div>
                 <div class="d-flex justify-content-center mt-4"> <span class="social" (click)="googleAuth()"><i
                             class="fa fa-google"></i></span> <span class="social"><i class="fa fa-facebook"></i></span>
